@@ -1,15 +1,12 @@
 # Couting Molecules
-Your task is to count the number of molecules in a cup of soda which contains distilled water, carbon dioxide, and glucose. You have a machine that counts the number of atoms of carbon, hydrogen, and oxygen in a given sample.
+Your task is to count the number of molecules in a cup of soda which contains distilled water (H2-O), carbon dioxide (C-O2), and glucose (C6-H12-O6). You have a machine that counts the number of atoms of carbon, hydrogen, and oxygen in a given sample.
 
 ## Input Format
 The input consists of a single line with three space separated integers: c, h, and o
 
 where
-
 c is the count of carbon atoms
-
 h is the count of hydrogen atoms
-
 o is the count of oxygen atoms
 
 ## Constraints
