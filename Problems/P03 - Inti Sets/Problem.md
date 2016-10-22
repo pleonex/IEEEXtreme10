@@ -11,7 +11,7 @@ Since the teacher is tired and he's sure that you are the best in class, he want
 The first line of input contains an integer Q, 1 ≤ Q ≤ 20, representing the number of students. Each of the next Q lines contain three space-separated integers N, A and B, which represent a query.
 
 ## Constraints
-1 ≤ A ≤ B ≤ N ≤ 1012
+1 ≤ A ≤ B ≤ N ≤ 10^12
 
 ## Output Format
 The output is exactly Q lines, one per student query. For each query you need to find the sum of all numbers between A and B, that are in the Inti set of N, and print the sum modulo 1000000007.
