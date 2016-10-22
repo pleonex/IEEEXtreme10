@@ -2,24 +2,35 @@
 # -*- coding: utf-8 -*-
 
 
-def sumar(base, letras, a, b):
-    if not a in letras:
-        sumando1 = 0
-    else:
-        sumando1 = letras.index(a)
+def convertir(base, letras, value):
+    salida = 0
 
-    if not b in letras:
-        sumando2 = 0
-    else:
-        sumando2 = letras.index(b)
 
-    resultado = sumando1+sumando2
+    value = value.replace(" ","")
+    value = value.replace("+","")
 
-    resultado_base = resultado%base
-    llevada = resultado//base
+    i = len(value)-1
 
-    return letras[llevada], letras[resultado_base]
+    for dig in value:
+        if not dig=='' and not dig=='+' and not dig==' ':
+            salida+=letras.index(dig)*base**i
+            i-=1
+    return salida
 
+
+def int2base(x, base,digs):
+  if x < 0: sign = -1
+  elif x == 0: return digs[0]
+  else: sign = 1
+  x *= sign
+  digits = []
+  while x:
+    digits.append(digs[x % base])
+    x /= base
+  if sign < 0:
+    digits.append('-')
+  digits.reverse()
+  return ''.join(digits)
 
 
 def main():
@@ -32,33 +43,26 @@ def main():
     sumando1 = raw_input()
     lenCadenas = len(sumando1)
     print(sumando1)
-    sumando1.replace(" ","")
 
     sumando2 = raw_input()
     print(sumando2)
-    sumando2.replace(" ","").replace("+","")
     print(raw_input())
 
     result = raw_input()
 
     base = int(base)
 
-    i = len(sumando1)-1
-    resultado = []
-    llevada = letras[0]
-    while i>0:
-        llevada, resultado_suma = sumar(base,letras,sumando1[i],llevada)
-        llevada, resultado_suma = sumar(base,letras,resultado_suma, llevada[0])
-        llevada, resultado_suma = sumar(base,letras,resultado_suma,sumando2[i])
+    sumando1 = convertir(base,letras,sumando1)
+    sumando2 = convertir(base,letras,sumando2)
 
-        resultado = [resultado_suma] + resultado
+    resultado = sumando1+sumando2
 
-        i-=1
+    final = int2base(resultado, base, letras)
+    espacios = lenCadenas-len(final)
 
-    salida_final = ''.join(str(e) for e in resultado)
-    salida_final = int((lenCadenas-len(salida_final)))*' '+str(salida_final)
-    print(salida_final)
+    final = ' '*espacios+final
 
+    print(final)
 
 if __name__ == '__main__':
     main()
