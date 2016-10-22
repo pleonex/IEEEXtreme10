@@ -1,0 +1,7 @@
+1
+
+2 2
+color 1 b
+yes
+color 2 r
+no
