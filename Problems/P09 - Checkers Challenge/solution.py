@@ -120,11 +120,11 @@ def play(scenario, last_pos, pos, king):
             new_king = True
 
         if check_finish(new_scenario):
-            result.append((mov,))
+            result.append((new_pos,))
         else:
             recur = play(new_scenario, pos, new_pos, new_king)
             for r in recur:
-                result.append((mov,) + r)
+                result.append((new_pos,) + r)
 
     return result
 
