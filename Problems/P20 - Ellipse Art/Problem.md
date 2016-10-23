@@ -4,19 +4,23 @@ In IEEEXtreme 9.0, you met the famous artist, I.M. Blockhead. This year we want 
 She needs your help. When she is done with the painting, she would like to know how much of the canvas is unpainted.
 
 ## Input Format
-The first line of input contains t, 1 ≤ t ≤ 8, which gives the number of test cases.
+The first line of input contains *t*, `1 ≤ t ≤ 8`, which gives the number of test cases.
 
-Each test case begins with a single integer, n, 1 ≤ n ≤ 40, which indicates the number of ellipses that Ivy has drawn.
+Each test case begins with a single integer, *n*, `1 ≤ n ≤ 40`, which indicates the number of ellipses that Ivy has drawn.
 
-The following n lines give the dimensions of each ellipse, in the following format:
+The following *n* lines give the dimensions of each ellipse, in the following format:
 ```
 x1 y1 x2 y2 r
 ```
+
 Where:
-* (x1, y1) and (x2, y2) are positive integers representing the location of the foci of the ellipse in cms, considering the center of the canvas to be the origin, as in the image below.
-* r is a positive integer giving the length of the ellipse's major axis
+* *(x1, y1)* and *(x2, y2)* are positive integers representing the location of the foci of the ellipse in cms, considering the center of the canvas to be the origin, as in the image below.
+* *r* is a positive integer giving the length of the ellipse's major axis
 
 You can refer to the [Wikipedia webpage for background information on ellipses](https://en.wikipedia.org/wiki/Ellipse).
+
+![chart](chart.png)
+*Coordinate system for the canvas.*
 
 ## Constraints
 ```

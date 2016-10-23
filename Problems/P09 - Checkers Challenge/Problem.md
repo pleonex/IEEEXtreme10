@@ -10,20 +10,23 @@ For this challenge, we will use the following variation on the official rules:
 6. We ask for the number of different ways the white player can win a single move. White wins by capturing all black pieces.
 
 ## Input Format
-Each input begins with an integer t, on a line by itself, indicating how many testcases are present.
+Each input begins with an integer *t*, on a line by itself, indicating how many testcases are present.
 
-Each testcase will contain 8 lines with the state of the board. The board will have a single white piece o, some black pieces x, and empty places .. White's side of the board is at the bottom of the board. So if the white piece were to reach to top row of the board, it would become a king.
+Each testcase will contain 8 lines with the state of the board. The board will have a single white piece `o`, some black pieces `x`, and empty places `.`. White's side of the board is at the bottom of the board. So if the white piece were to reach to top row of the board, it would become a king.
 
 In between each testcase is a blank line.
 
 ## Constraints
-`1 ≤ t ≤ 5`
+```
+1 ≤ t ≤ 5
+```
 
 There will always be at least 1, and no more than 16, black pieces in each game.
+
 The game board will always be 8x8 squares in size.
 
 ## Output Format
-For each testcase, output, on a line by itself, the number of possible ways the white can win, or 0 if he cannot.
+For each testcase, output, on a line by itself, the number of possible ways the white can win, or `0` if he cannot.
 
 ## Sample Input
 ```

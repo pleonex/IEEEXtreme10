@@ -9,20 +9,20 @@ The questions can be in one of the following forms:
 2. You may ask about the count of balloons of a particular color, e.g.:
     * "Are there 3 red balloons?"
     * "Are there 0 blue balloons?"
-3. The previous types of questions can be subquestions that are combined together into a larger question with or's or and's. When combined with an or, only one of the answers to the subquestions must be `yes` for the answer to the entire question to be `yes`, and when combined with and, all of the answers to the subquestions must be `yes` in order to the answer to the larger question to be `yes`.
-    * "Is the third balloon green or the fourth balloon red?"
-    * "Is the tenth balloon red and are there three red balloons and is the first balloon blue?"
+3. The previous types of questions can be subquestions that are combined together into a larger question with *or*'s or *and*'s. When combined with an *or*, only one of the answers to the subquestions must be `yes` for the answer to the entire question to be `yes`, and when combined with *and*, all of the answers to the subquestions must be `yes` in order to the answer to the larger question to be `yes`.
+    * "Is the third balloon green *or* the fourth balloon red?"
+    * "Is the tenth balloon red *and* are there three red balloons *and* is the first balloon blue?"
 
-Note that subquestions in a particular question will be combined either with or's or and's, but not both. You are not allowed to ask a question like "Is the tenth balloon red or are there three red balloons and is the first balloon blue?"
+Note that subquestions in a particular question will be combined either with *or*'s or *and*'s, but not both. You are not allowed to ask a question like "Is the tenth balloon red or are there three red balloons *and* is the first balloon blue?"
 
 At the beginning of the game, your friend will tell you how many answers to your questions will be lies. *Your friend will be honest when telling you the number of lies he is about to tell*. Your task is to determine what colors each of the balloons could be given the answers to your questions, and the number of lies that were told.
 
 ## Input Format
-The input begins an integer t, 1 ≤ t ≤ 20, which gives the number of testcases in the input.
+The input begins an integer *t*, `1 ≤ t ≤ 20`, which gives the number of testcases in the input.
 
-There will be a blank line preceding each testcase. Each testcase begins a line containing two space-separated integers q and n, where q is the number of questions that you asked, and n is the number of lies that your friend told when answering your questions. Note: 1 ≤ q ≤ 20, 0 ≤ n ≤ q
+There will be a blank line preceding each testcase. Each testcase begins a line containing two space-separated integers *q* and *n*, where *q* is the number of questions that you asked, and n is the number of lies that your friend told when answering your questions. Note: `1 ≤ q ≤ 20`, `0 ≤ n ≤ q`
 
-The next 2 q lines represent the questions and answers. A question will be made up of between 1 and 10, inclusive, subquestions in one of the following forms:
+The next 2 *q* lines represent the questions and answers. A question will be made up of between 1 and 10, inclusive, subquestions in one of the following forms:
 
 ```
 color i c
@@ -30,24 +30,24 @@ color i c
 count c j
 ```
 
-The first type of subquestion is asking if the ith balloon is the color c. i will be an integer, 1 ≤ i ≤ 10, and c will be one of the following characters: r, g, or b.
+The first type of subquestion is asking if the *ith* balloon is the color *c*. *i* will be an integer, `1 ≤ i ≤ 10`, and *c* will be one of the following characters: `r`, `g`, or `b`.
 
-The second type of subquestion is asking if the number of balloons of color c is equal to j. c will again be one of the following characters: r, g, or b. j will be an integer, 0 ≤ j ≤ 10.
+The second type of subquestion is asking if the number of balloons of color *c* is equal to *j*. *c* will again be one of the following characters: `r`, `g`, or `b`. *j* will be an integer, `0 ≤ j ≤ 10`.
 
-When there are multiple subquestions in a question, they will be separated by or or and.
+When there are multiple subquestions in a question, they will be separated by `or` or `and`.
 
-The answer to each question will appear on the line immediately following the question, and it will be either yes or no.
+The answer to each question will appear on the line immediately following the question, and it will be either `yes` or `no`.
 
 ## Output Format
-For each test case, you should output a single line containing ten space separated values, where the ith value in the line corresponds to what you conclude about the color of the ith balloon. Each of the values will be one of the following strings:
+For each test case, you should output a single line containing ten space separated values, where the *ith* value in the line corresponds to what you conclude about the color of the *ith* balloon. Each of the values will be one of the following strings:
 
-* r, if you know that the balloon is red.
-* g, if you know that the balloon is green.
-* b, if you know that the balloon is blue.
-* rg, if you know that the balloon must be either red or green.
-* rb, if you know that the balloon must be either red or blue.
-* gb, if you know that the balloon must be either blue or green.
-* rgb, if you know that the balloon could be any of the possible colors.
+* `r`, if you know that the balloon is red.
+* `g`, if you know that the balloon is green.
+* `b`, if you know that the balloon is blue.
+* `rg`, if you know that the balloon must be either red or green.
+* `rb`, if you know that the balloon must be either red or blue.
+* `gb`, if you know that the balloon must be either blue or green.
+* `rgb`, if you know that the balloon could be any of the possible colors.
 
 Note that there should not be a space after the last value in the line.
 

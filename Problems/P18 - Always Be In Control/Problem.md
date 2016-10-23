@@ -18,7 +18,7 @@ There are many ways to build control charts and selecting the right one depends 
 `LCLX = Xave - A2 Rave`
 `CLX = Xave`
 
-Where Xave is the average of the Xi values, Rave is the average of the range values, and A2 is a constant that depends on the size of the groups we created, as shown in the table below.
+Where *Xave* is the average of the *Xi* values, Rave is the average of the range values, and *A2* is a constant that depends on the size of the groups we created, as shown in the table below.
 ```
 Size of group (n)      A2
     2                1.880
@@ -35,9 +35,9 @@ Size of group (n)      A2
 ## Input Format
 The first line of the input will be an integer between 1 and 20, inclusive, that is the number of test cases in the input.
 
-Each test case will be specified by one line of space separated integers. The first will be x, 1 ≤ x ≤ 10,000, the number of data points in the test case. The second will be n, 2 ≤ n ≤ 10, the number of elements in a subgroup. That will be followed by x space separated integers for the test case containing the sequential data gathered from an engineering process. These will be integers with values between -10,000 and 10,000, inclusive.
+Each test case will be specified by one line of space separated integers. The first will be *x*, `1 ≤ x ≤ 10,000`, the number of data points in the test case. The second will be *n*, `2 ≤ n ≤ 10`, the number of elements in a subgroup. That will be followed by *x* space separated integers for the test case containing the sequential data gathered from an engineering process. These will be integers with values between -10,000 and 10,000, inclusive.
 
-The last subgroup may be incomplete (i.e. it may not contain n elements). The last subgroup should be treated like a normal subgroup, even if it is incomplete. For example, let's say the subgroup had the entries <1,6,2>. If n = 10, this subgroup is incomplete. The range would be 5 (6 - 1 = 5), and the average would be 3 ((1 + 6 + 2)/3 = 3). If there is only 1 item in this subgroup, the average would be equal to the number, and the range would be 0.
+The last subgroup may be incomplete (i.e. it may not contain n elements). The last subgroup should be treated like a normal subgroup, even if it is incomplete. For example, let's say the subgroup had the entries <1,6,2>. If `n = 10`, this subgroup is incomplete. The range would be 5 `(6 - 1 = 5)`, and the average would be 3 `((1 + 6 + 2)/3 = 3)`. If there is only 1 item in this subgroup, the average would be equal to the number, and the range would be 0.
 
 ## Output Format
 You are to calculate the three sigma control limits and then test the data to see if it is in control or out of control. For each test case, output, on a line by itself, either "In Control" or "Out of Control" as appropriate.
@@ -96,6 +96,6 @@ LCL         -13.6466
 SIGMA         4.9622
 ```
 
-For these calculations, A2 is 0.577 because we grouped five items in a group. As shown in the table, Xave is 1.24, and Rave is 25.8. Since the control limits are "3-sigma" lines, sigma is one third of the distance between the center line and the upper control limit.
+For these calculations, *A2* is 0.577 because we grouped five items in a group. As shown in the table, *Xave* is 1.24, and *Rave* is 25.8. Since the control limits are "3-sigma" lines, sigma is one third of the distance between the center line and the upper control limit.
 
-This process would be considered out of control because there are a number of points, e.g. -18 and 20, that are more than three sigma from the center line. Note that in a real world analysis, you would need much more data to draw this conclusion.
+This process would be considered out of control because there are a number of points, e.g. `-18` and `20`, that are more than three sigma from the center line. Note that in a real world analysis, you would need much more data to draw this conclusion.
